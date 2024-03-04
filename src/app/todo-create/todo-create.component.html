@@ -1,0 +1,10 @@
+<form [formGroup]="formTodo" (ngSubmit)="addTodo()">
+  <mat-form-field appearance="outline">
+    <mat-label>Tarefa</mat-label>
+    <input matInput placeholder="Placeholder" formControlName="name" />
+  </mat-form-field>
+
+  <button mat-button color="primary" type="submit" [disabled]="formTodo.invalid">
+    Adicionar
+  </button>
+</form>
