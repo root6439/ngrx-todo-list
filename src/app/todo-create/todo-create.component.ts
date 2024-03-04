@@ -27,5 +27,6 @@ export class TodoCreateComponent {
 
   addTodo(): void {
     this.store.dispatch(addTodo({ text: this.formTodo.get('name').value }));
+    this.formTodo.reset();
   }
 }
